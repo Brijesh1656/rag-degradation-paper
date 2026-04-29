@@ -4,6 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](./Retrieval_Degradation_in_Multi_Turn_Agentic_RAG_Systems.pdf)
 [![LaTeX](https://img.shields.io/badge/Source-LaTeX-blue)](./Paper.tex)
+[![Status](https://img.shields.io/badge/Status-arXiv%20Submission%20Pending-orange)](#)
 [![License](https://img.shields.io/badge/License-Research-green)](#)
 
 > **Author:** Brijesh Singh — Independent Researcher, Hyderabad, India  
@@ -20,7 +21,8 @@ Through instrumented logging of **150 multi-turn sessions** (550 turn observatio
 - **6.6% decline** in mean retrieval relevance between turn 1 and turn 4 (*p* < 0.0001)
 - **Context length** as the dominant predictor (Pearson *r* = −0.283, *p* < 0.0001)
 - Three contributing mechanisms: context length interference, keyword drift, and attention head saturation
-- A lightweight **turn-aware retrieval confidence estimator** (AUROC = 0.634), with the key finding that context length alone achieves AUROC = 0.695
+- A lightweight **turn-aware retrieval confidence estimator** (AUROC = 0.634)
+- A **surprising finding**: context length alone (AUROC = 0.695) outperforms the composite estimator, suggesting it is the single most actionable signal for retrieval quality prediction in agentic RAG
 
 ## Key Findings
 
@@ -143,7 +145,7 @@ Where:
 | **Turn-aware estimator (ours)** | **0.634** | [0.52, 0.74] |
 | Context length only | **0.695*** | [0.58, 0.80] |
 
-\* Context length alone outperforms the composite estimator — a key finding.
+\* Context length alone outperforms the composite estimator — a key finding with direct implications for lightweight monitoring in production RAG systems.
 
 ## Repository Structure
 
@@ -152,6 +154,8 @@ rag-degradation-paper/
 ├── Paper.tex                                                    # LaTeX source
 ├── Retrieval_Degradation_in_Multi_Turn_Agentic_RAG_Systems.pdf  # Compiled paper
 ├── references.bbl                                               # Bibliography entries
+├── code/                                                        # Analysis code
+│   └── analysis.py                                              # Statistical analysis and figure generation
 ├── fig/                                                         # Figures
 │   ├── figure1_context_growth.png                               # Context length growth across turns
 │   ├── figure2_retrieval_quality.png                            # Retrieval quality degradation
@@ -181,10 +185,11 @@ If you find this work useful, please cite:
   author  = {Singh, Brijesh},
   title   = {Retrieval Degradation in Multi-Turn Agentic RAG Systems: Observations from a Production Deployment},
   year    = {2026},
-  note    = {Independent research paper},
+  note    = {Preprint. arXiv submission pending},
 }
 ```
 
 ## License
 
 This work is shared for research and educational purposes. Please contact the author for any reuse inquiries.
+
