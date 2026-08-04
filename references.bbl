@@ -7,19 +7,11 @@
 }
 
 @inproceedings{hayashi2025iterkey,
-  author    = {Hayashi, Koki and Kamigaito, Hidetaka and Kouda, Shuhei and Watanabe, Taro},
+  author    = {Hayashi, Kazuki and Kamigaito, Hidetaka and Kouda, Shinya and Watanabe, Taro},
   title     = {{IterKey}: Iterative Keyword Generation with {LLMs} for Enhanced Retrieval Augmented Generation},
   booktitle = {Proceedings of the Conference on Language Modeling (COLM)},
   year      = {2025},
-}
-
-@inproceedings{jeong2024adaptiverag,
-  author    = {Jeong, Soyeong and Baek, Jinheon and Cho, Sukmin and Hwang, Sung Ju and Park, Jong C.},
-  title     = {{Adaptive-RAG}: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity},
-  booktitle = {Proceedings of the Annual Conference of the North American Chapter of the Association
-               for Computational Linguistics (NAACL)},
-  year      = {2024},
-  url       = {https://arxiv.org/abs/2403.14403},
+  url       = {https://arxiv.org/abs/2505.08450},
 }
 
 @inproceedings{jiang2023active,
@@ -34,22 +26,13 @@
 
 @inproceedings{karpukhin2020dense,
   author    = {Karpukhin, Vladimir and Oguz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell
-               and Edunov, Sergei and Chen, Danqi and Yih, Wen-tau},
+               and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
   title     = {Dense Passage Retrieval for Open-Domain Question Answering},
   booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing
                (EMNLP)},
   pages     = {6769--6781},
   year      = {2020},
   url       = {https://arxiv.org/abs/2004.04906},
-}
-
-@article{kurihara2025lctg,
-  author    = {Kurihara, Kohei and Mita, Masaaki and Zhang, Peng and Sasaki, Shun and Ishigami, Ryo
-               and Okazaki, Naoaki},
-  title     = {{LCTG Bench}: {LLM} Controlled Text Generation Benchmark},
-  journal   = {arXiv preprint arXiv:2501.15875},
-  year      = {2025},
-  url       = {https://arxiv.org/abs/2501.15875},
 }
 
 @inproceedings{lewis2020retrieval,
@@ -76,7 +59,7 @@
 }
 
 @article{ma2026retrieval,
-  author    = {Ma, Yifei and Okazaki, Naoaki},
+  author    = {Ma, Youmi and Okazaki, Naoaki},
   title     = {From Interpretability to Performance: Optimizing Retrieval Heads for Long-Context
                Language Models},
   journal   = {arXiv preprint arXiv:2601.11020},
@@ -84,29 +67,15 @@
   url       = {https://arxiv.org/abs/2601.11020},
 }
 
-@inproceedings{okazaki2024japanese,
-  author    = {Okazaki, Naoaki and Hattori, Ko and Hirai, Shuhei and others},
-  title     = {Building a Large Japanese Web Corpus for Large Language Models},
-  booktitle = {Proceedings of the Conference on Language Modeling (COLM)},
-  year      = {2024},
-}
-
 @inproceedings{ozaki2025confidence,
-  author    = {Ozaki, Shun and Kato, Yuki and Feng, Siyuan and others},
+  author    = {Ozaki, Shintaro and Kato, Yuta and Feng, Siyuan and Tomita, Masayo and
+               Hayashi, Kazuki and Hashimoto, Wataru and Obara, Ryoma and Oyamada, Masafumi and
+               Hayashi, Katsuhiko and Kamigaito, Hidetaka and Watanabe, Taro},
   title     = {Understanding the Impact of Confidence in Retrieval Augmented Generation:
                A Case Study in the Medical Domain},
   booktitle = {Proceedings of the BioNLP Workshop},
   year      = {2025},
-}
-
-@inproceedings{wei2022chain,
-  author    = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian
-               and Xia, Fei and Chi, Ed and Le, Quoc V. and Zhou, Denny},
-  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  volume    = {35},
-  year      = {2022},
-  url       = {https://arxiv.org/abs/2201.11903},
+  url       = {https://arxiv.org/abs/2412.20309},
 }
 
 @article{yan2024corrective,
@@ -127,10 +96,10 @@
 }
 
 @inproceedings{yoshikawa2023selective,
-  author    = {Yoshikawa, Hana and Okazaki, Naoaki},
+  author    = {Yoshikawa, Hiyori and Okazaki, Naoaki},
   title     = {Selective-{LAMA}: Selective Prediction for Confidence-Aware Evaluation of Language
                Models},
   booktitle = {Findings of the Association for Computational Linguistics: EACL},
   year      = {2023},
-  url       = {https://arxiv.org/abs/2211.09085},
+  url       = {https://aclanthology.org/2023.findings-eacl.150},
 }
