@@ -711,35 +711,40 @@ in production systems today.
 \noindent\textbf{References}
 
 \begin{hangparas}{2em}{1}
-Asai, A., Wu, Z., Wang, Y., Sil, A., and Hajishirzi, H. (2023). Self-RAG: Learning to retrieve, generate, and critique through
-     self-reflection. \textit{ICLR 2024}.
+Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi (2023). Self-RAG: Learning to retrieve, generate,
+     and critique through self-reflection. \textit{ICLR 2024}.
 
-Hayashi, K., Kamigaito, H., Kouda, S., and Watanabe, T. (2025). IterKey: Iterative keyword generation with LLMs for
-    enhanced retrieval augmented generation. \textit{COLM 2025}.
+Kazuki Hayashi, Hidetaka Kamigaito, Shinya Kouda, and Taro Watanabe (2025). IterKey: Iterative keyword generation with
+    LLMs for enhanced retrieval augmented generation. \textit{COLM 2025}.
 
-Jiang, Z., Xu, F. F., Gao, L., et al. (2023). Active retrieval augmented generation. \textit{EMNLP 2023}.
+Zhengbao Jiang, Frank F. Xu, Luyu Gao, Zhiqing Sun, Qian Liu, Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, and Graham
+    Neubig (2023). Active retrieval augmented generation. \textit{EMNLP 2023}.
 
-Karpukhin, V., Oguz, B., Min, S., Lewis, P., et al. (2020). Dense passage retrieval for open-domain question answering.
-    \textit{EMNLP 2020}.
+Vladimir Karpukhin, Barlas Oğuz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and Wen-tau Yih (2020).
+    Dense passage retrieval for open-domain question answering. \textit{EMNLP 2020}.
 
-Lewis, P., Perez, E., Piktus, A., Petroni, F., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks.
-    \textit{NeurIPS 33}, 9459--9474.
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike
+    Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela (2020). Retrieval-augmented generation for
+    knowledge-intensive NLP tasks. \textit{NeurIPS 33}, 9459--9474.
 
-Liu, N. F., Lin, K., Hewitt, J., et al. (2023). Lost in the middle: How language models use long contexts.
-    \textit{TACL 12}, 157--173.
+Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang (2023).
+    Lost in the middle: How language models use long contexts. \textit{TACL 12}, 157--173.
 
-Ma, Y. and Okazaki, N. (2026). From interpretability to performance: Optimizing retrieval heads for long-context language
-    models. \textit{arXiv:2601.11020}.
+Youmi Ma and Naoaki Okazaki (2026). From interpretability to performance: Optimizing retrieval heads for long-context
+    language models. \textit{arXiv:2601.11020}.
 
-Ozaki, S., Kato, Y., Feng, S., et al. (2025). Understanding the impact of confidence in retrieval augmented generation:
-     A case study in the medical domain. \textit{BioNLP 2025}.
+Shintaro Ozaki, Yuta Kato, Siyuan Feng, Masayo Tomita, Kazuki Hayashi, Wataru Hashimoto, Ryoma Obara, Masafumi Oyamada,
+    Katsuhiko Hayashi, Hidetaka Kamigaito, and Taro Watanabe (2025). Understanding the impact of confidence in
+    retrieval augmented generation: A case study in the medical domain. \textit{BioNLP 2025}.
 
-Yan, S., Gu, J., Zhu, Y., and Ling, Z. (2024). Corrective retrieval augmented generation. \textit{arXiv:2401.15884}.
+Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, and Zhen-Hua Ling (2024). Corrective retrieval augmented generation.
+    \textit{arXiv:2401.15884}.
 
-Yao, S., Zhao, J., Yu, D., et al. (2023). ReAct: Synergizing reasoning and acting in language models. \textit{ICLR 2023}.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao (2023). ReAct: Synergizing
+    reasoning and acting in language models. \textit{ICLR 2023}.
 
-Yoshikawa, H. and Okazaki, N. (2023). Selective-LAMA: Selective prediction for confidence-aware evaluation of language
-    models. \textit{Findings of EACL 2023}.
+Hiyori Yoshikawa and Naoaki Okazaki (2023). Selective-LAMA: Selective prediction for confidence-aware evaluation of
+    language models. \textit{Findings of EACL 2023}.
 \end{hangparas}
 
 \appendix
@@ -747,10 +752,8 @@ Yoshikawa, H. and Okazaki, N. (2023). Selective-LAMA: Selective prediction for c
 
 \section{Logging Implementation}
 The per-turn logging system was implemented as a TypeScript service (\texttt{logger.ts}) integrated into the
-production Gemini API service layer. Each call to \texttt{generateSolution()} logs the following fields after the API response:
-
-\newpage
-
+production Gemini API service layer. Each call to \texttt{generateSolution()} logs the following fields after the API
+response:
 \begin{verbatim}
 interface TurnLog {
   sessionId: string           // Random session identifier
