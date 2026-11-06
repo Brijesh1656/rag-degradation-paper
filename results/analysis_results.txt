@@ -43,7 +43,7 @@ Turn      N   Avg Sim  Avg Tokens
    5     3     0.2778        3611
 
 ───────────────────────────────────────────────────────
-STATISTICAL TESTS (corrected)
+STATISTICAL TESTS 
 ───────────────────────────────────────────────────────
 Session-clustered slope on turn : -0.0075/turn, 95% CI [-0.0126, -0.0024], p=0.004 (150 sessions)
 Turn 1 vs Turn 4 (unpaired t)   : t=2.01, p=0.046
