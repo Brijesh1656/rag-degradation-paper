@@ -1,4 +1,4 @@
-RAG Analysis Results — 2026-04-07 14:25
+RAG Analysis Results — 2026-11-06 11:15
 =======================================================
 
 Total sessions     : 150
@@ -15,27 +15,57 @@ Pearson r          : -0.283
 C_baseline tokens  : 482
 
 ───────────────────────────────────────────────────────
-TABLE 3: Confidence Estimator AUROC
+TABLE 3: Confidence Estimator AUROC (exploratory)
 ───────────────────────────────────────────────────────
-Turn-aware           : 0.6343
-Turn only            : 0.5632
-Context only         : 0.6955
-Similarity only      : 0.5532
+Turn-aware           : 0.6343   95% CI [0.429, 0.844]
+Turn only            : 0.5632   95% CI [0.300, 0.804]
+Context only         : 0.6955   95% CI [0.420, 0.920]
+Similarity only      : 0.5532   95% CI [0.367, 0.740]
+Labeled turns      : 102 (incorrect: 8)
 
 ───────────────────────────────────────────────────────
-KEYWORD DRIFT
+KEYWORD DRIFT (sub-query similarity, consecutive turns)
 ───────────────────────────────────────────────────────
-Turns 1-2: 0.3276
-Turns 2-3: 0.3205
-Turns 3-4: 0.3151
-Turns 4-5: 0.3146
+Turns 1-2: 0.2574  (n=147)
+Turns 2-3: 0.2469  (n=142)
+Turns 3-4: 0.2430  (n=108)
+Turns 4-5: 0.3045  (n=3)
+Drift slope: -0.0057/step, p=0.556 (not significant)
 
 ───────────────────────────────────────────────────────
 PER-TURN TABLE
 ───────────────────────────────────────────────────────
-Turn      N    Avg Sim   Avg Tokens
-  1     150     0.3227          482
-  2     147     0.3155          972
-  3     142     0.3068         1464
-  4     108     0.3014         2095
-  5       3     0.2778         3611
+Turn      N   Avg Sim  Avg Tokens
+   1   150     0.3227         482
+   2   147     0.3155         972
+   3   142     0.3068        1464
+   4   108     0.3014        2095
+   5     3     0.2778        3611
+
+───────────────────────────────────────────────────────
+STATISTICAL TESTS (corrected)
+───────────────────────────────────────────────────────
+Session-clustered slope on turn : -0.0075/turn, 95% CI [-0.0126, -0.0024], p=0.004 (150 sessions)
+Turn 1 vs Turn 4 (unpaired t)   : t=2.01, p=0.046
+Turn 1 vs Turn 4 (Welch)        : t=2.05, p=0.042
+Matched sessions (reach turn 4) : n=108, T1=0.3108, T4=0.3014, paired t=1.40, p=0.165 (not significant)
+Selection effect: Turn-1 sim, sessions reaching turn 4 = 0.3108 (n=108) vs not = 0.3532 (n=42), p=0.033
+Pearson r (context vs sim)      : -0.283, p=1.7e-11, n=547
+  cluster-bootstrap 95% CI      : [-0.356, -0.204]
+Spearman rho                    : -0.295
+Partial r (context | turn)      : -0.304
+Corr(turn, context tokens)      : 0.742  (inseparable within sessions)
+Session fixed effects, context  : b=-1.01e-05, p=0.004
+Session FE, context + turn      : context p=0.78, turn p=0.23 (neither separable)
+R2 context / turn               : 0.080 / 0.012
+Retrieval tiers                 : Tier 1 = 547, Tier 2 = 3
+Anchoring enabled               : all 550 turns
+
+───────────────────────────────────────────────────────
+SESSIONS BY PROBLEM TYPE
+───────────────────────────────────────────────────────
+calculus    : 64
+algebra     : 53
+geometry    : 17
+statistics  : 15
+other       : 1
